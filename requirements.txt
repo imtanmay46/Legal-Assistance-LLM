@@ -1,0 +1,13 @@
+peft
+tqdm
+torch
+numpy
+gdown
+wandb
+pandas
+pynvml
+gradio
+datasets
+accelerate
+bitsandbytes
+transformers
