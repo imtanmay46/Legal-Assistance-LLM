@@ -44,7 +44,8 @@ cd Legal-Assistance-LLM
 pip install -r requirements.txt
 ```
 
-### 2. Load Base & Fine-tuned Model (ONLY if any corrective measures are needed, as the ipynb file contains this itself)
+### 2. Load Base & Fine-tuned Model 
+(ONLY if any corrective measures are needed, as the ipynb file contains this itself)
 
 ```bash
 from transformers import AutoModelForCausalLM, AutoTokenizer
