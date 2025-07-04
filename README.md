@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This repository presents a **legal question-answering assistant** built on top of Meta’s **LLaMA 3.1 8B Instruct** model and fine-tuned using **PEFT (LoRA)**. It supports natural language queries on legal topics, especially pertaining to the **Indian Penal Code (IPC)**, **Criminal Procedural Code(CRPC)** and **Indian Constitution**.
+This repository presents a **legal question-answering assistant** built on top of Meta’s **LLaMA 3.1 8B Instruct** model and fine-tuned using **PEFT (LoRA)**. It supports natural language queries on legal topics, especially about the **Indian Penal Code (IPC)**, **Criminal Procedural Code(CRPC)**, and **Indian Constitution**.
 
 The assistant can be queried via a Python script or a **Gradio web interface** and is designed to run efficiently on limited GPU memory with `torch.float16`.
 
@@ -25,13 +25,26 @@ The assistant can be queried via a Python script or a **Gradio web interface** a
 
 ## Setup & Usage Instructions
 
+### Prerequisites
+
+- Python 3.10+
+- PyTorch with GPU (CUDA 11+)
+- Dependencies from `requirements.txt`
+
+### Cloning the Repository
+
+```bash
+git clone https://github.com/imtanmay46/Legal-Assistance-LLM.git
+cd Legal-Assistance-LLM
+```
+
 ### 1. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Load Base & Fine-tuned Model
+### 2. Load Base & Fine-tuned Model (ONLY if any corrective measures are needed, as the ipynb file contains this itself)
 
 ```bash
 from transformers import AutoModelForCausalLM, AutoTokenizer
