@@ -50,10 +50,10 @@ tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3.1-8B-Instruct
 ## Inference Examples
 
 ### Sample 1
-![Demo UI](assets/LLM_Demo1.jpeg)
+![Demo UI](LLM_Demo1.jpeg)
 
 ### Sample 2
-![Demo UI](assets/LLM_Demo2.jpeg)
+![Demo UI](LLM_Demo2.jpeg)
 
 ## Gradio Web Interface
 
