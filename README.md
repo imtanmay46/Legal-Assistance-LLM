@@ -31,3 +31,30 @@ The assistant can be queried via a Python script or a **Gradio web interface** a
 pip install -r requirements.txt
 ```
 
+### 2. Load Base & Fine-tuned Model
+
+```bash
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
+
+base_model = AutoModelForCausalLM.from_pretrained(
+    "meta-llama/Meta-Llama-3.1-8B-Instruct", 
+    device_map="auto", 
+    torch_dtype=torch.float16
+)
+
+peft_model = PeftModel.from_pretrained(base_model, "path/to/peft_adapter/")
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3.1-8B-Instruct", trust_remote_code=True)
+```
+
+## Inference Examples
+
+### Sample 1
+![Demo UI](assets/LLM_Demo1.jpeg)
+
+### Sample 2
+![Demo UI](assets/LLM_Demo2.jpeg)
+
+## Gradio Web Interface
+
+Visit `http://127.0.0.1:7861` (local URL) or `https://2f4375a3bce0e2241d.gradio.live` (public URL) to chat with the Legal LLaMA Assistant.
